@@ -1,0 +1,1109 @@
+{
+  "timestamp": "20260704-133948",
+  "summary": {
+    "totalTests": 18,
+    "passed": 17,
+    "failed": 1,
+    "sumDurationMs": 6983,
+    "avgPeakMemoryMB": 35.72833333333333,
+    "avgCpuUserPercent": 10.825000000000001,
+    "avgCpuSystemPercent": 1.6305555555555555,
+    "maxCpuUserPercent": 23.85,
+    "maxCpuSystemPercent": 7.76
+  },
+  "testResults": [
+    {
+      "testName": "Add a visit to a pet",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Click add visit for pet {}",
+          "parameters": [
+            "Leo"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill visit date {}",
+          "parameters": [
+            "2020-05-10"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Fill description {}",
+          "parameters": [
+            "health check"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Click add visit",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 8,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 9,
+          "action": "See at least one visit for pet {}",
+          "parameters": [
+            "Leo"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 1212,
+      "peakMemoryMB": 27.45,
+      "peakCpuUserPercent": 12.95,
+      "peakCpuSystemPercent": 7.76
+    },
+    {
+      "testName": "Visit with empty description shows error",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1/pets/1/visits/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Click add visit",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Error message should be {}",
+          "parameters": [
+            "must not be blank"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 305,
+      "peakMemoryMB": 32.84,
+      "peakCpuUserPercent": 10.16,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Add multiple visits",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Click add visit for pet {}",
+          "parameters": [
+            "Leo"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill description {}",
+          "parameters": [
+            "{visitDesc}"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Click add visit",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Click add visit for pet {}",
+          "parameters": [
+            "Leo"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill description {}",
+          "parameters": [
+            "{visitDesc}"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Click add visit",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Click add visit for pet {}",
+          "parameters": [
+            "Leo"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill description {}",
+          "parameters": [
+            "{visitDesc}"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Click add visit",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 1,
+          "action": "Page contains {}",
+          "parameters": [
+            "{visitDesc}"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 1,
+          "action": "Page contains {}",
+          "parameters": [
+            "{visitDesc}"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 1,
+          "action": "Page contains {}",
+          "parameters": [
+            "{visitDesc}"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 726,
+      "peakMemoryMB": 33.81,
+      "peakCpuUserPercent": 17.22,
+      "peakCpuSystemPercent": 2.2
+    },
+    {
+      "testName": "Trigger exception page",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/oups"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Page contains {}",
+          "parameters": [
+            "Expected: controller used to showcase"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 210,
+      "peakMemoryMB": 36.17,
+      "peakCpuUserPercent": 7.14,
+      "peakCpuSystemPercent": 7.14
+    },
+    {
+      "testName": "Non-existent owner",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/7777"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Page contains {}",
+          "parameters": [
+            "Owner not found with id:"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 215,
+      "peakMemoryMB": 38.45,
+      "peakCpuUserPercent": 14.88,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Create new owner - valid",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill first name {}",
+          "parameters": [
+            "John"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill last name {}",
+          "parameters": [
+            "Doe"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Fill address {}",
+          "parameters": [
+            "123 Main St"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Fill city {}",
+          "parameters": [
+            "Springfield"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 6,
+          "action": "Fill telephone {}",
+          "parameters": [
+            "5551234567"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 7,
+          "action": "Click add owner",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 8,
+          "action": "Success message should be {}",
+          "parameters": [
+            "New Owner Created"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 327,
+      "peakMemoryMB": 38.73,
+      "peakCpuUserPercent": 23.85,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Find owners by last name – multiple results",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/find"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill last name {}",
+          "parameters": [
+            "Davis"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Click find owner",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Owner list has more than one row",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Page contains {}",
+          "parameters": [
+            "Owners"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 312,
+      "peakMemoryMB": 35.31,
+      "peakCpuUserPercent": 15.06,
+      "peakCpuSystemPercent": 5.13
+    },
+    {
+      "testName": "Find owners by last name - single result",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/find"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill last name {}",
+          "parameters": [
+            "Franklin"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Click find owner",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "URL should be {}",
+          "parameters": [
+            "/owners/1"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Page contains {}",
+          "parameters": [
+            "George Franklin"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 302,
+      "peakMemoryMB": 40.12,
+      "peakCpuUserPercent": 5.3,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Find owners – no results",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/find"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill last name {}",
+          "parameters": [
+            "Unknown"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Click find owner",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Error message should be {}",
+          "parameters": [
+            "has not been found"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 287,
+      "peakMemoryMB": 40.31,
+      "peakCpuUserPercent": 10.8,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Edit owner address successfully",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1/edit"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Clear field {}",
+          "parameters": [
+            "address"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill address {}",
+          "parameters": [
+            "456 New Street"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Click add owner",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Success message should be {}",
+          "parameters": [
+            "Owner Values Updated"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 6,
+          "action": "Page contains {}",
+          "parameters": [
+            "456 New Street"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 313,
+      "peakMemoryMB": 35.03,
+      "peakCpuUserPercent": 5.11,
+      "peakCpuSystemPercent": 4.79
+    },
+    {
+      "testName": "Telephone validation with multiple incorrect formats",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill first name {}",
+          "parameters": [
+            "John"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill last name {}",
+          "parameters": [
+            "Doe"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Fill address {}",
+          "parameters": [
+            "123 Main St"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Fill city {}",
+          "parameters": [
+            "Springfield"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 6,
+          "action": "Fill telephone {}",
+          "parameters": [
+            "abc"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 7,
+          "action": "Click add owner",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill first name {}",
+          "parameters": [
+            "John"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill last name {}",
+          "parameters": [
+            "Doe"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Fill address {}",
+          "parameters": [
+            "123 Main St"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Fill city {}",
+          "parameters": [
+            "Springfield"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 6,
+          "action": "Fill telephone {}",
+          "parameters": [
+            "123"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 7,
+          "action": "Click add owner",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill first name {}",
+          "parameters": [
+            "John"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill last name {}",
+          "parameters": [
+            "Doe"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Fill address {}",
+          "parameters": [
+            "123 Main St"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Fill city {}",
+          "parameters": [
+            "Springfield"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 6,
+          "action": "Fill telephone {}",
+          "parameters": [
+            "12345678901"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 7,
+          "action": "Click add owner",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill first name {}",
+          "parameters": [
+            "John"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill last name {}",
+          "parameters": [
+            "Doe"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Fill address {}",
+          "parameters": [
+            "123 Main St"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Fill city {}",
+          "parameters": [
+            "Springfield"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 6,
+          "action": "Fill telephone {}",
+          "parameters": [
+            "5551234567"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 7,
+          "action": "Click add owner",
+          "parameters": [],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 686,
+      "peakMemoryMB": 39.21,
+      "peakCpuUserPercent": 20.55,
+      "peakCpuSystemPercent": 2.33
+    },
+    {
+      "testName": "Add a new pet to existing owner",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1/pets/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill pet name {}",
+          "parameters": [
+            "Alice"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill birth date {}",
+          "parameters": [
+            "2020-05-10"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Select type {}",
+          "parameters": [
+            "cat"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Click add pet",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 6,
+          "action": "Page contains {}",
+          "parameters": [
+            "Alice"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 307,
+      "peakMemoryMB": 30.98,
+      "peakCpuUserPercent": 10.1,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Duplicate pet name validation",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1/pets/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill pet name {}",
+          "parameters": [
+            "Leo"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill birth date {}",
+          "parameters": [
+            "2010-09-07"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Select type {}",
+          "parameters": [
+            "cat"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Click add pet",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 6,
+          "action": "Error message should be {}",
+          "parameters": [
+            "is already in use"
+          ],
+          "status": "failed",
+          "error": "expected '' to include 'is already in use'"
+        }
+      ],
+      "status": "failed",
+      "durationMs": 335,
+      "peakMemoryMB": 36.7,
+      "peakCpuUserPercent": 4.78,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Birth date in future is rejected",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1/pets/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill pet name {}",
+          "parameters": [
+            "Future"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Fill birth date {}",
+          "parameters": [
+            "2030-01-01"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Select type {}",
+          "parameters": [
+            "dog"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Click add pet",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 6,
+          "action": "Error message should be {}",
+          "parameters": [
+            "invalid date"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 314,
+      "peakMemoryMB": 36.88,
+      "peakCpuUserPercent": 4.78,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Validate pet creation requires name",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1/pets/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill birth date {}",
+          "parameters": [
+            "2020-05-10"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Select type {}",
+          "parameters": [
+            "dog"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Click add pet",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Error message should be {}",
+          "parameters": [
+            "is required"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 328,
+      "peakMemoryMB": 33.7,
+      "peakCpuUserPercent": 14.33,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Validate pet creation requires birth date",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1/pets/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill pet name {}",
+          "parameters": [
+            "NoBirth"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Select type {}",
+          "parameters": [
+            "dog"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Click add pet",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 5,
+          "action": "Error message should be {}",
+          "parameters": [
+            "is required"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 319,
+      "peakMemoryMB": 39.64,
+      "peakCpuUserPercent": 9.72,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Edit pet name successfully",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1/pets/1/edit"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Fill pet name {}",
+          "parameters": [
+            "LeoEdited"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Click button {}",
+          "parameters": [
+            "Update Pet"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 4,
+          "action": "Page contains {}",
+          "parameters": [
+            "LeoEdited"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 288,
+      "peakMemoryMB": 39.87,
+      "peakCpuUserPercent": 0,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "View vets as HTML with loop",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/vets.html?page=1"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 197,
+      "peakMemoryMB": 27.91,
+      "peakCpuUserPercent": 8.12,
+      "peakCpuSystemPercent": 0
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "timestamp": "2026-07-03T10-39-23-973Z",
+  "summary": {
+    "totalTests": 21,
+    "passed": 21,
+    "failed": 0,
+    "sumDurationMs": 13977,
+    "avgPeakMemoryMB": 79.96591331845238,
+    "maxPeakMemoryMB": 94.13713073730469,
+    "avgCpuUserPercent": 9.021858716103454,
+    "avgCpuSystemPercent": 0.554102086975561,
+    "maxCpuUserPercent": 27.27272727272727,
+    "maxCpuSystemPercent": 3.4261241970021414
+  },
+  "testResults": [
+    {
+      "testName": "Trigger exception page",
+      "status": "passed",
+      "durationMs": 1159,
+      "peakMemoryMB": 76.67243957519531,
+      "cpuUserPercent": 4.055220017256255,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Non-existent owner",
+      "status": "passed",
+      "durationMs": 634,
+      "peakMemoryMB": 79.39208221435547,
+      "cpuUserPercent": 7.255520504731862,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Create new owner - valid",
+      "status": "passed",
+      "durationMs": 748,
+      "peakMemoryMB": 80.25199127197266,
+      "cpuUserPercent": 27.27272727272727,
+      "cpuSystemPercent": 2.0053475935828877
+    },
+    {
+      "testName": "Find owners by last name – multiple results",
+      "status": "passed",
+      "durationMs": 529,
+      "peakMemoryMB": 71.4300765991211,
+      "cpuUserPercent": 11.909262759924385,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Find owners by last name - single result",
+      "status": "passed",
+      "durationMs": 531,
+      "peakMemoryMB": 76.4518051147461,
+      "cpuUserPercent": 11.864406779661017,
+      "cpuSystemPercent": 3.0131826741996233
+    },
+    {
+      "testName": "Find owners – no results",
+      "status": "passed",
+      "durationMs": 458,
+      "peakMemoryMB": 81.37004852294922,
+      "cpuUserPercent": 10.262008733624455,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Edit owner address successfully",
+      "status": "passed",
+      "durationMs": 537,
+      "peakMemoryMB": 87.02006530761719,
+      "cpuUserPercent": 11.731843575418994,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Telephone validation with incorrect formats",
+      "status": "passed",
+      "durationMs": 470,
+      "peakMemoryMB": 92.95917510986328,
+      "cpuUserPercent": 10,
+      "cpuSystemPercent": 3.1914893617021276
+    },
+    {
+      "testName": "Telephone validation with incorrect formats",
+      "status": "passed",
+      "durationMs": 585,
+      "peakMemoryMB": 94.13713073730469,
+      "cpuUserPercent": 8.034188034188034,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Telephone validation with incorrect formats",
+      "status": "passed",
+      "durationMs": 519,
+      "peakMemoryMB": 74.3835678100586,
+      "cpuUserPercent": 5.973025048169557,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Telephone validation with valid format",
+      "status": "passed",
+      "durationMs": 526,
+      "peakMemoryMB": 80.40997314453125,
+      "cpuUserPercent": 3.041825095057034,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Add a new pet to existing owner",
+      "status": "passed",
+      "durationMs": 513,
+      "peakMemoryMB": 86.69383239746094,
+      "cpuUserPercent": 9.161793372319687,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Duplicate pet name validation",
+      "status": "passed",
+      "durationMs": 484,
+      "peakMemoryMB": 91.95357513427734,
+      "cpuUserPercent": 3.0991735537190084,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Birth date in future is rejected",
+      "status": "passed",
+      "durationMs": 467,
+      "peakMemoryMB": 92.71408081054688,
+      "cpuUserPercent": 23.554603854389722,
+      "cpuSystemPercent": 3.4261241970021414
+    },
+    {
+      "testName": "Validate pet creation requires name",
+      "status": "passed",
+      "durationMs": 490,
+      "peakMemoryMB": 72.38489532470703,
+      "cpuUserPercent": 6.530612244897959,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Validate pet creation requires birth date",
+      "status": "passed",
+      "durationMs": 463,
+      "peakMemoryMB": 77.20774841308594,
+      "cpuUserPercent": 3.2397408207343417,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Edit pet name successfully",
+      "status": "passed",
+      "durationMs": 541,
+      "peakMemoryMB": 81.95037841796875,
+      "cpuUserPercent": 2.957486136783734,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "View vets as HTML with loop",
+      "status": "passed",
+      "durationMs": 524,
+      "peakMemoryMB": 85.99826049804688,
+      "cpuUserPercent": 3.0534351145038165,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Add a visit to a pet",
+      "status": "passed",
+      "durationMs": 1044,
+      "peakMemoryMB": 64.74673461914062,
+      "cpuUserPercent": 19.54022988505747,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Visit with empty description shows error",
+      "status": "passed",
+      "durationMs": 863,
+      "peakMemoryMB": 64.8977279663086,
+      "cpuUserPercent": 3.5921205098493627,
+      "cpuSystemPercent": 0
+    },
+    {
+      "testName": "Add multiple visits",
+      "status": "passed",
+      "durationMs": 1892,
+      "peakMemoryMB": 66.25859069824219,
+      "cpuUserPercent": 3.3298097251585626,
+      "cpuSystemPercent": 0
+    }
+  ]
+}
