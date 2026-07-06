@@ -1,0 +1,86 @@
+{
+  "timestamp": "20260704-132737",
+  "summary": {
+    "totalTests": 3,
+    "passed": 1,
+    "failed": 2,
+    "sumDurationMs": 4972,
+    "avgPeakMemoryMB": 26.876666666666665,
+    "avgCpuUserPercent": 13.443333333333333,
+    "avgCpuSystemPercent": 1.8266666666666669,
+    "maxCpuUserPercent": 30.46,
+    "maxCpuSystemPercent": 5.48
+  },
+  "testResults": [
+    {
+      "testName": "Add a visit to a pet",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1"
+          ],
+          "status": "failed",
+          "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/owners/1\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/owners/1\", waiting until \"load\"\u001b[22m\n"
+        }
+      ],
+      "status": "failed",
+      "durationMs": 3136,
+      "peakMemoryMB": 26.36,
+      "peakCpuUserPercent": 1.5,
+      "peakCpuSystemPercent": 5.48
+    },
+    {
+      "testName": "Visit with empty description shows error",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1/pets/1/visits/new"
+          ],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Click add visit",
+          "parameters": [],
+          "status": "passed"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Error message should be {}",
+          "parameters": [
+            "must not be blank"
+          ],
+          "status": "passed"
+        }
+      ],
+      "status": "passed",
+      "durationMs": 1685,
+      "peakMemoryMB": 26.66,
+      "peakCpuUserPercent": 8.37,
+      "peakCpuSystemPercent": 0
+    },
+    {
+      "testName": "Add multiple visits",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Open page {}",
+          "parameters": [
+            "http://localhost:8080/owners/1"
+          ],
+          "status": "failed",
+          "error": "browserContext.newPage: Target page, context or browser has been closed"
+        }
+      ],
+      "status": "failed",
+      "durationMs": 151,
+      "peakMemoryMB": 27.61,
+      "peakCpuUserPercent": 30.46,
+      "peakCpuSystemPercent": 0
+    }
+  ]
+}
